@@ -1,10 +1,10 @@
 import "./App.css";
-import logo from "./images/logo.png";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   return (
     <div>
-      <img src={logo} alt="company logo" />
+      <NavBar />
     </div>
   );
 }
