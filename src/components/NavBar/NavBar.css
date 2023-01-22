@@ -7,3 +7,28 @@
 .logo-img {
   width: 100%;
 }
+.nav__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  padding: 0.8rem 0;
+}
+.nav__top ul {
+  list-style: none;
+  display: flex;
+}
+.nav__categories-wrapper {
+  gap: 1.8rem;
+  text-transform: uppercase;
+}
+.nav__options-wrapper {
+  gap: 1.2rem;
+  text-transform: capitalize;
+}
+.nav-option-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
