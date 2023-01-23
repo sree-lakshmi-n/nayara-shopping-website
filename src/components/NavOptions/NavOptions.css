@@ -1,0 +1,10 @@
+.nav__options-wrapper {
+  gap: 1.2rem;
+  text-transform: capitalize;
+}
+.nav-option-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
