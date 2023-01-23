@@ -1,24 +1,12 @@
-.logo {
-  width: 10%;
-  cursor: pointer;
-  border: none;
-  background: none;
-}
-.logo-img {
-  width: 100%;
-}
 .nav__top {
   justify-content: space-between;
   width: 90%;
   margin: auto;
   padding: 0.8rem 0;
 }
-.nav__top ul {
-  list-style: none;
-  display: flex;
-}
 .nav__categories-wrapper {
   gap: 1.8rem;
+  list-style: none;
   text-transform: uppercase;
 }
 .nav__options-wrapper {
