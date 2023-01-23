@@ -1,6 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@200;300;400;500;600;700&display=swap");
 
 :root {
+  /* Colors */
+  /* Primary */
+  --brand-color: #0255bf;
+
+  /* Accents */
+  --dark-accent: #485d7c;
+  --light-accent: #63a3c5;
+
+  /* Shades */
+  --dark-shade: #13121d;
+  --light-shade: #ece4e4;
+
   /* Font weights */
   --font-light: 300;
   --font-regular: 400;
@@ -22,5 +34,9 @@ html {
 
 /* General Styling */
 body {
-  font-family: ;
+  font-family: "Sofia Sans", sans-serif;
+  font-size: 1.6rem;
+  color: var(--dark-shade);
+  background-color: var(--light-shade);
+  line-height: 1;
 }
