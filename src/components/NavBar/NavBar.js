@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../images/logo.png";
 import FlexWrapper from "../../UI/FlexWrapper/FlexWrapper";
+import Logo from "../Logo/Logo";
 import "./NavBar.css";
 
 export default function NavBar() {
@@ -26,28 +26,32 @@ export default function NavBar() {
     },
   ];
   return (
-    <FlexWrapper className="flex-center-align nav__top">
-      <button className="logo">
-        <img src={logo} alt="company logo" className="logo-img" />
-      </button>
-      <nav className="nav__categories">
-        <ul className="nav__categories-wrapper">
+    <FlexWrapper className="flex-center-align nav__top" element="nav">
+      <Logo />
+      <nav className="nav__categories ">
+        <FlexWrapper
+          className="nav__categories-wrapper flex-center-align"
+          element="ul"
+        >
           {categories.map((category, index) => (
             <li key={index} className="category-item">
               {category}
             </li>
           ))}
-        </ul>
+        </FlexWrapper>
       </nav>
       <nav className="nav__options">
-        <ul className="nav__options-wrapper">
+        <FlexWrapper
+          className="nav__options-wrapper flex-center-align"
+          element="ul"
+        >
           {options.map((option, index) => (
-            <li key={index} className="nav-option-item">
+            <FlexWrapper key={index} className="nav-option-item" element="ul">
               <ion-icon name={`${option.icon}-outline`}></ion-icon>
               <span className="option-label">{option.option}</span>
-            </li>
+            </FlexWrapper>
           ))}
-        </ul>
+        </FlexWrapper>
       </nav>
     </FlexWrapper>
   );
