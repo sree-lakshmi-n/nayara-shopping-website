@@ -3,3 +3,6 @@
   list-style: none;
   text-transform: uppercase;
 }
+.category-item {
+  cursor: pointer;
+}
