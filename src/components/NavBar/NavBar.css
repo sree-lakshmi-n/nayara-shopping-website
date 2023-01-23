@@ -4,11 +4,7 @@
   margin: auto;
   padding: 0.8rem 0;
 }
-.nav__categories-wrapper {
-  gap: 1.8rem;
-  list-style: none;
-  text-transform: uppercase;
-}
+
 .nav__options-wrapper {
   gap: 1.2rem;
   text-transform: capitalize;
