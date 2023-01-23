@@ -8,8 +8,6 @@
   width: 100%;
 }
 .nav__top {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
   width: 90%;
   margin: auto;
