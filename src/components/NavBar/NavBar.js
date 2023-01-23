@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../images/logo.png";
+import FlexWrapper from "../../UI/FlexWrapper/FlexWrapper";
 import "./NavBar.css";
 
 export default function NavBar() {
@@ -25,7 +26,7 @@ export default function NavBar() {
     },
   ];
   return (
-    <nav className="nav__top">
+    <FlexWrapper className="flex-center-align nav__top">
       <button className="logo">
         <img src={logo} alt="company logo" className="logo-img" />
       </button>
@@ -48,6 +49,6 @@ export default function NavBar() {
           ))}
         </ul>
       </nav>
-    </nav>
+    </FlexWrapper>
   );
 }
