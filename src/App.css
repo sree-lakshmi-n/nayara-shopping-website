@@ -1,0 +1,37 @@
+/* GENERAL REUSABLE COMPONENTS */
+.heading-primary,
+.heading-secondary {
+  font-weight: var(--font-semi-bold);
+  letter-spacing: -0.5px;
+}
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+/* Buttons */
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: var(--font-bold);
+  font-family: inherit;
+  color: inherit;
+}
+.btn-cta:link,
+.btn-cta:visited {
+  background-color: var(--brand-color);
+  color: var(--light-shade);
+}
+.btn-cta:hover,
+.btn-cta:active {
+  background-color: var(--dark-blue);
+}
