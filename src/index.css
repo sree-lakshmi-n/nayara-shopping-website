@@ -11,13 +11,17 @@
 
   /* Shades */
   --dark-shade: #13121d;
-  --light-shade: #ece4e4;
+  --light-shade: #ffffff;
+
+  --dark-blue: #024499;
+  --catskill-white: #e6eef9;
 
   /* Font weights */
   --font-light: 300;
   --font-regular: 400;
   --font-medium: 500;
   --font-semi-bold: 600;
+  --font-bold: 700;
 }
 
 /* Global Reset */
