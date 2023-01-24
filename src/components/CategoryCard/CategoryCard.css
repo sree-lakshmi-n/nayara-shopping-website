@@ -1,9 +1,18 @@
 .category-card {
-  height: 25rem;
-  width: 30%;
+  height: 30rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
 }
 .electronics-img {
   background-image: linear-gradient(
@@ -36,4 +45,21 @@
       var(--dark-blue-alpha-3)
     ),
     url(../../images/categories-coverimage-womenclothing.jpg);
+}
+.btn-category {
+  background-color: var(--dark-blue);
+  color: var(--catskill-white);
+  text-transform: capitalize;
+  opacity: 0;
+  font-weight: var(--font-wt-semi-bold);
+}
+.btn-category:hover {
+  background-color: var(--very-dark-blue);
+}
+.category-card:hover {
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+  transform: translateY(-1.2rem);
+}
+.category-card:hover .btn-category {
+  opacity: 1;
 }
