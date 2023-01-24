@@ -14,7 +14,7 @@ function App() {
     <div>
       <NavBar categories={categories} />
       <HeroSection />
-      <CategoriesSection />
+      <CategoriesSection categories={categories} />
     </div>
   );
 }
