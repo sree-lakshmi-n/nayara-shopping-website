@@ -16,6 +16,9 @@
   --dark-blue: #024499;
   --catskill-white: #e6eef9;
 
+  --brand-color-alpha-3: rgb(2, 85, 191, 0.35);
+  --dark-blue-alpha-3: rgb(2, 68, 153, 0.35);
+
   /* Font weights */
   --font-light: 300;
   --font-regular: 400;
