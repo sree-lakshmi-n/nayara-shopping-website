@@ -1,16 +1,16 @@
 import "./CategoriesSection.css";
 import React from "react";
-import Container from "../../UI/Container/Container";
 import CategoryCard from "../CategoryCard/CategoryCard";
+import GridWrapper from "../../UI/GridWrapper/GridWrapper";
 
 export default function CategoriesSection(props) {
   return (
     <section className="categories-section">
-      <Container className="catergories-wrapper">
+      <GridWrapper className="categories-wrapper grid--2-cols">
         {props.categories.map((category) => {
           return <CategoryCard category={category} />;
         })}
-      </Container>
+      </GridWrapper>
     </section>
   );
 }
