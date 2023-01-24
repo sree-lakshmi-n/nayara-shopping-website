@@ -15,7 +15,7 @@ export default function HeroSection() {
         </div>
         <div className="hero-textbox">
           <h1 className="heading-primary">
-            Kick of the new year with the best of the categories
+            Kick off the new year with the best of the categories
           </h1>
           <p className="hero-description">
             Electronics, Jewellery, Clothing, and more
