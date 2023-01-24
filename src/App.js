@@ -4,9 +4,15 @@ import HeroSection from "./components/HeroSection/HeroSection";
 import NavBar from "./components/NavBar/NavBar";
 
 function App() {
+  const categories = [
+    "electronics",
+    "jewellery",
+    "men's clothing",
+    "women's clothing",
+  ];
   return (
     <div>
-      <NavBar />
+      <NavBar categories={categories} />
       <HeroSection />
       <CategoriesSection />
     </div>
