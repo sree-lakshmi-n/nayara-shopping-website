@@ -4,8 +4,8 @@ import React from "react";
 
 export default function Logo() {
   return (
-    <button className="logo">
-      <img src={logo} alt="company logo" className="logo-img" />
-    </button>
+    <a href="#home" className="logo">
+      <img src={logo} alt="Nayara logo" className="logo-img" />
+    </a>
   );
 }
