@@ -7,10 +7,12 @@ import "./NavBar.css";
 
 export default function NavBar() {
   return (
-    <FlexWrapper className="flex-center-align nav__top" element="nav">
-      <Logo />
-      <NavCategories />
-      <NavOptions />
-    </FlexWrapper>
+    <header className="main-nav">
+      <FlexWrapper className="flex-center-align nav__top" element="nav">
+        <Logo />
+        <NavCategories />
+        <NavOptions />
+      </FlexWrapper>
+    </header>
   );
 }
