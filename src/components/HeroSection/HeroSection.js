@@ -1,11 +1,12 @@
 import React from "react";
 import heroImage from "../../images/heroimage.png";
+import GridWrapper from "../../UI/GridWrapper/GridWrapper";
 import "./HeroSection.css";
 
 export default function HeroSection() {
   return (
     <section className="hero-section">
-      <div className="hero">
+      <GridWrapper className="hero grid--2-cols grid--center-v">
         <div className="hero-imagebox">
           <img
             src={heroImage}
@@ -24,7 +25,7 @@ export default function HeroSection() {
             Shop now &rarr;
           </a>
         </div>
-      </div>
+      </GridWrapper>
     </section>
   );
 }
