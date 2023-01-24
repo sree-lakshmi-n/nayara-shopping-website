@@ -1,3 +1,6 @@
+.main-nav {
+  background-color: var(--catskill-white);
+}
 .nav__top {
   justify-content: space-between;
   width: 90%;
