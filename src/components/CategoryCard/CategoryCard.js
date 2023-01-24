@@ -11,7 +11,7 @@ export default function CategoryCard(props) {
         .join("")}-img`}
       element="div"
     >
-      <button className="btn">{props.category}</button>
+      <button className="btn btn-category">{props.category}</button>
     </FlexWrapper>
   );
 }
