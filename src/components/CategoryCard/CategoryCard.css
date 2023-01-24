@@ -1,0 +1,39 @@
+.category-card {
+  height: 25rem;
+  width: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.electronics-img {
+  background-image: linear-gradient(
+      to right bottom,
+      var(--brand-color-alpha-3),
+      var(--dark-blue-alpha-3)
+    ),
+    url(../../images/categories-coverimage-electronics.jpg);
+}
+.jewellery-img {
+  background-image: linear-gradient(
+      to right bottom,
+      var(--brand-color-alpha-3),
+      var(--dark-blue-alpha-3)
+    ),
+    url(../../images/categories-coverimage-jewellery.jpeg);
+}
+.menclothing-img {
+  background-image: linear-gradient(
+      to right bottom,
+      var(--brand-color-alpha-3),
+      var(--dark-blue-alpha-3)
+    ),
+    url(../../images/categories-coverimage-menclothing.jpg);
+}
+.womenclothing-img {
+  background-image: linear-gradient(
+      to right bottom,
+      var(--brand-color-alpha-3),
+      var(--dark-blue-alpha-3)
+    ),
+    url(../../images/categories-coverimage-womenclothing.jpg);
+}
