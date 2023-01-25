@@ -1,8 +1,5 @@
 import "./App.css";
-import CategoriesSection from "./components/CategoriesSection/CategoriesSection";
-import FeaturesSection from "./components/FeaturesSection/FeaturesSection";
-import HeroSection from "./components/HeroSection/HeroSection";
-import NavBar from "./components/NavBar/NavBar";
+import Home from "./Pages/Home/Home";
 
 function App() {
   const categories = [
@@ -12,12 +9,9 @@ function App() {
     "women's clothing",
   ];
   return (
-    <div>
-      <NavBar categories={categories} />
-      <HeroSection />
-      <CategoriesSection categories={categories} />
-      <FeaturesSection />
-    </div>
+    <main>
+      <Home categories={categories} />
+    </main>
   );
 }
 
