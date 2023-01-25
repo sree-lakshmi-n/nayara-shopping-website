@@ -13,8 +13,8 @@ export default function NavOptions() {
       icon: "heart",
     },
     {
-      option: "profile",
-      icon: "bag",
+      option: "Cart",
+      icon: "cart",
     },
   ];
   return (
