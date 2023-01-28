@@ -1,6 +1,7 @@
 import "./NavOptions.css";
 import React from "react";
 import FlexWrapper from "../../UI/FlexWrapper/FlexWrapper";
+import { Link } from "react-router-dom";
 
 export default function NavOptions() {
   const options = [
@@ -13,7 +14,7 @@ export default function NavOptions() {
       icon: "heart",
     },
     {
-      option: "Cart",
+      option: "cart",
       icon: "cart",
     },
   ];
@@ -25,7 +26,10 @@ export default function NavOptions() {
       >
         {options.map((option, index) => (
           <FlexWrapper key={index} className="nav-option-item" element="ul">
-            <ion-icon name={`${option.icon}-outline`}></ion-icon>
+            <Link to={`/${option.option}`}>
+              {" "}
+              <ion-icon name={`${option.icon}-outline`}></ion-icon>
+            </Link>
             <span className="option-label">{option.option}</span>
           </FlexWrapper>
         ))}

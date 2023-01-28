@@ -1,6 +1,7 @@
 import "./CategoryCard.css";
 import React from "react";
 import FlexWrapper from "../../UI/FlexWrapper/FlexWrapper";
+import { Link } from "react-router-dom";
 
 export default function CategoryCard(props) {
   return (
@@ -11,7 +12,9 @@ export default function CategoryCard(props) {
         .join("")}-img`}
       element="div"
     >
-      <button className="btn btn-category">{props.category}</button>
+      <Link to={`/${props.category}`} className="btn btn-category">
+        {props.category}
+      </Link>
     </FlexWrapper>
   );
 }

@@ -1,6 +1,7 @@
 import "./NavCategories.css";
 import FlexWrapper from "../../UI/FlexWrapper/FlexWrapper";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function NavCategories(props) {
   return (
@@ -11,7 +12,7 @@ export default function NavCategories(props) {
       >
         {props.categories.map((category, index) => (
           <li key={index} className="category-item">
-            {category}
+            <Link to={`/${category}`}> {category}</Link>
           </li>
         ))}
       </FlexWrapper>
