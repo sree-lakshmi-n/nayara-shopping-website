@@ -6,3 +6,6 @@
 .category-item {
   cursor: pointer;
 }
+.category-item:hover {
+  color: var(--brand-color);
+}
