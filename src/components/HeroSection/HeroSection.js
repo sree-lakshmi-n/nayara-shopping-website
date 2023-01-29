@@ -21,9 +21,6 @@ export default function HeroSection() {
           <p className="hero-description">
             Electronics, Jewellery, Clothing, and more
           </p>
-          <a href="#home" className="btn btn-cta">
-            Shop now &rarr;
-          </a>
         </div>
       </GridWrapper>
     </section>
