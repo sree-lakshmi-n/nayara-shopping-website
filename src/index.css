@@ -45,6 +45,6 @@ body {
   font-family: "Sofia Sans", sans-serif;
   font-size: 1.6rem;
   color: var(--dark-shade);
-  background-color: var(--light-shade);
+  background-color: var(--catskill-white);
   line-height: 1;
 }
