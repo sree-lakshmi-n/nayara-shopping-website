@@ -1,5 +1,9 @@
 import "./Products.css";
 import React, { useEffect, useState } from "react";
+import GridWrapper from "../../UI/GridWrapper/GridWrapper";
+import FlexWrapper from "../../UI/FlexWrapper/FlexWrapper";
+import ProductImageBox from "../ProductImageBox/ProductImageBox";
+import { Link } from "react-router-dom";
 
 export default function Products(props) {
   const [products, setProducts] = useState([]);
@@ -10,18 +14,26 @@ export default function Products(props) {
       .then((json) => setProducts(json));
   }, [props.category]);
   return (
-    <div>
+    <GridWrapper className="products-container grid--2-cols">
       {products.map((product) => {
         return (
-          <div key={product.id} className="pdt-wrapper">
-            <div className="pdt-image-wrapper">
-              <img src={product.image} alt="product" />
+          <FlexWrapper
+            key={product.id}
+            className="pdt-wrapper flex-dirn-col"
+            element="div"
+          >
+            <ProductImageBox image={product.image} />
+
+            <div className="pdt-info">
+              <span className="pdt-cost">${product.price}</span>
+              <a href="#id">
+                <ion-icon name="cart-outline"></ion-icon>
+              </a>
             </div>
-            <p className="pdt-title">{product.title}</p>
-            <p className="pdt-description">{product.description}</p>
-          </div>
+            <Link to={`/${props.category}/${product.id}`}>More info</Link>
+          </FlexWrapper>
         );
       })}
-    </div>
+    </GridWrapper>
   );
 }
