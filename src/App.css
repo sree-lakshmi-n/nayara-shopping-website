@@ -26,6 +26,7 @@
   font-family: inherit;
   color: inherit;
 }
+.btn-cta,
 .btn-cta:link,
 .btn-cta:visited {
   background-color: var(--brand-color);
