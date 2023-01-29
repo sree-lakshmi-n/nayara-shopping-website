@@ -43,30 +43,29 @@ export default function ProductDetailsCard() {
         </div>
       )}
       {product && (
-        <FlexWrapper className="pdt-details-wrapper " element="div">
+        <FlexWrapper
+          className="pdt-details-wrapper flex-center-align"
+          element="div"
+        >
           <ProductImageBox image={product.image} />
-          <div className="pdt-contentbox">
-            <span className="category-tag">{product.category}</span>
+          <FlexWrapper element="div" className="pdt-contentbox flex-dirn-col">
             <p className="pdt-title">{product.title}</p>
             <p className="pdt-description">{product.description}</p>
-            <div className="ratings-wrapper">
-              <span className="rating">{product.rating.rate}</span>
-              <div className="product__rating">
-                {Array(Math.round(product.rating.rate))
-                  .fill()
-                  .map((_, i) => (
-                    <p>🌟</p>
-                  ))}
-              </div>
-              <span className="rating-count">{product.rating.count}</span>
-            </div>
-            <div className="cta-wrapper">
-              <span className="price">{product.price}</span>
-              <button onClick={addToBasket} className="btn-add-to-basket">
-                <ion-icon name="cart-outline"></ion-icon>
-              </button>
-            </div>
-          </div>
+            <FlexWrapper element="div" className="pdt-info flex-center-align">
+              <span className="pdt-rating">{product.rating.rate} ⭐️</span>
+              <span className="rating-count">
+                ({product.rating.count} ratings)
+              </span>
+              <span className="pdt-cost">${product.price}</span>
+            </FlexWrapper>
+
+            <button
+              onClick={addToBasket}
+              className="btn btn-cta btn-add-to-basket"
+            >
+              Add To Cart<ion-icon name="cart-outline"></ion-icon>
+            </button>
+          </FlexWrapper>
         </FlexWrapper>
       )}
     </>
