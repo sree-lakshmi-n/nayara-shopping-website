@@ -1,9 +1,28 @@
 .pdt-details-wrapper {
   padding: 9.6rem 0;
-  width: 90%;
+  width: 70%;
   margin: auto;
-  gap: 6.4rem;
+  gap: 9.6rem;
 }
 .pdt-details-wrapper > * {
   width: 50%;
+}
+.pdt-title {
+  color: var(--dark-blue);
+  font-size: 3.6rem;
+  font-weight: var(--font-semi-bold);
+}
+.pdt-contentbox {
+  gap: 2.4rem;
+}
+
+.pdt-contentbox .pdt-info {
+  gap: 1.2rem;
+}
+.pdt-contentbox .pdt-info .pdt-cost {
+  margin-left: auto;
+}
+.pdt-description {
+  line-height: 1.5;
+  color: var(--dark-accent);
 }
