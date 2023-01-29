@@ -63,7 +63,7 @@ export default function ProductDetailsCard() {
               onClick={addToBasket}
               className="btn btn-cta btn-add-to-basket"
             >
-              Add To Cart<ion-icon name="cart-outline"></ion-icon>
+              Add To Cart
             </button>
           </FlexWrapper>
         </FlexWrapper>
