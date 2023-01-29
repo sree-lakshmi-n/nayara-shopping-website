@@ -1,5 +1,6 @@
 .category-card {
   height: 30rem;
+  color: var(--catskill-white);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -48,7 +49,7 @@
 }
 .btn-category {
   background-color: var(--dark-blue);
-  color: var(--catskill-white);
+
   text-transform: capitalize;
   opacity: 0;
   font-weight: var(--font-wt-semi-bold);
