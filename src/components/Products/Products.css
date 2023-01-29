@@ -6,8 +6,11 @@
 }
 .pdt-img {
   width: 100%;
-  height: 50rem;
 }
+.products-container .pdt-img {
+  height: 30rem;
+}
+
 .pdt-wrapper {
   gap: 1.8rem;
   background-color: var(--light-shade);
@@ -21,4 +24,32 @@
 .loading {
   width: 30%;
   margin: 4.8rem auto;
+}
+.pdt-image-wrapper {
+  width: 60%;
+  align-self: center;
+}
+.pdt-name {
+  color: var(--dark-blue);
+  font-size: 2rem;
+  font-weight: var(--font-bold);
+}
+.pdt-name:hover {
+  color: var(--very-dark-blue);
+  text-decoration: underline;
+}
+.pdt-info {
+  gap: 2.4rem;
+}
+.pdt-rating {
+  padding: 1.2rem;
+  background-color: var(--dark-blue);
+  font-size: 1.8rem;
+  color: var(--light-shade);
+  display: inline-block;
+}
+.pdt-cost {
+  color: var(--dark-blue);
+  font-size: 3.2rem;
+  font-weight: var(--font-bold);
 }
