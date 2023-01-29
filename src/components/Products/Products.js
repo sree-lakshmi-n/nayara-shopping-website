@@ -31,12 +31,19 @@ export default function Products(props) {
                 element="div"
               >
                 <ProductImageBox image={product.image} />
-
-                <div className="pdt-info">
-                  <span className="pdt-rating">{product.rating.rate}</span>
+                <Link
+                  to={`/${props.category}/${product.id}`}
+                  className="pdt-name"
+                >
+                  {product.title}
+                </Link>
+                <FlexWrapper
+                  element="div"
+                  className="pdt-info flex-center-align"
+                >
+                  <span className="pdt-rating">{product.rating.rate} ⭐️</span>
                   <span className="pdt-cost">${product.price}</span>
-                </div>
-                <Link to={`/${props.category}/${product.id}`}>More info</Link>
+                </FlexWrapper>
               </FlexWrapper>
             );
           })}
