@@ -1,11 +1,24 @@
 .products-container {
-  width: 90%;
+  width: 80%;
   margin: auto;
   padding: 9.6rem 0;
+  gap: 8.4rem;
 }
 .pdt-img {
   width: 100%;
+  height: 50rem;
 }
 .pdt-wrapper {
-  justify-content: space-between;
+  gap: 1.8rem;
+  background-color: var(--light-shade);
+  padding: 4.8rem;
+  border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
+}
+.loading {
+  width: 30%;
+  margin: 4.8rem auto;
 }
