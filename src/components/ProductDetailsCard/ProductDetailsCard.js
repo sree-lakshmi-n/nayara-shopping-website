@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import ProductImageBox from "../ProductImageBox/ProductImageBox";
 import { useParams } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
+import FlexWrapper from "../../UI/FlexWrapper/FlexWrapper";
+import loading from "../../images/loading.gif";
 
 export default function ProductDetailsCard() {
   const { id } = useParams();
@@ -35,9 +37,13 @@ export default function ProductDetailsCard() {
 
   return (
     <>
-      {!product && <div>Loading...</div>}
+      {!product && (
+        <div className="loading">
+          <img src={loading} alt="loading animation" />
+        </div>
+      )}
       {product && (
-        <div className="pdt-details-wrapper">
+        <FlexWrapper className="pdt-details-wrapper " element="div">
           <ProductImageBox image={product.image} />
           <div className="pdt-contentbox">
             <span className="category-tag">{product.category}</span>
@@ -61,7 +67,7 @@ export default function ProductDetailsCard() {
               </button>
             </div>
           </div>
-        </div>
+        </FlexWrapper>
       )}
     </>
   );
