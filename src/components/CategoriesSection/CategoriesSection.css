@@ -1,5 +1,6 @@
 .categories-section {
   padding: 9.6rem 0;
+  background-color: var(--light-shade);
 }
 .categories-wrapper {
   padding: 0 3.2rem;
