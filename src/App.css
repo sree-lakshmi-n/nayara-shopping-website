@@ -35,3 +35,8 @@
 .btn-cta:active {
   background-color: var(--dark-blue);
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
