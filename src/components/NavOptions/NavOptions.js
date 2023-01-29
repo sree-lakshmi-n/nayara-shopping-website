@@ -2,8 +2,10 @@ import "./NavOptions.css";
 import React from "react";
 import FlexWrapper from "../../UI/FlexWrapper/FlexWrapper";
 import { Link } from "react-router-dom";
+import { useStateValue } from "../../StateProvider";
 
 export default function NavOptions() {
+  const [{ basket, user }, dispatch] = useStateValue();
   const options = [
     {
       option: "profile",
@@ -30,6 +32,9 @@ export default function NavOptions() {
               {" "}
               <ion-icon name={`${option.icon}-outline`}></ion-icon>
             </Link>
+            {option.option === "cart" && (
+              <span className="cart-total">{basket?.length}</span>
+            )}
             <span className="option-label">{option.option}</span>
           </FlexWrapper>
         ))}
