@@ -3,6 +3,7 @@ import Home from "./Pages/Home/Home";
 import NavBar from "./components/NavBar/NavBar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Products from "./components/Products/Products";
+import ProductDetailsCard from "./components/ProductDetailsCard/ProductDetailsCard";
 
 function App() {
   const categories = [
@@ -37,6 +38,7 @@ function App() {
             path="/women's clothing"
             element={<Products category="women's clothing" />}
           />
+          <Route path="/:category/:id" element={<ProductDetailsCard />} />
         </Routes>
       </BrowserRouter>
     </main>
