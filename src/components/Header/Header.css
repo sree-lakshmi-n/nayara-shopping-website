@@ -1,0 +1,9 @@
+.main-nav {
+  background-color: var(--catskill-white);
+}
+.nav__top {
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  padding: 2.4rem 0;
+}
