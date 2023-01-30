@@ -8,7 +8,7 @@ export default function NavOptions() {
   const [{ basket, user }, dispatch] = useStateValue();
   const options = [
     {
-      option: "profile",
+      option: "login",
       icon: "person",
     },
     {
