@@ -1,9 +1,10 @@
 import "./App.css";
 import Home from "./Pages/Home/Home";
-import NavBar from "./components/NavBar/NavBar";
+import Header from "./components/Header/Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Products from "./components/Products/Products";
 import ProductDetailsCard from "./components/ProductDetailsCard/ProductDetailsCard";
+import Login from "./components/Login/Login";
 
 function App() {
   const categories = [
@@ -15,8 +16,9 @@ function App() {
   return (
     <main>
       <BrowserRouter>
-        <NavBar categories={categories} />
+        <Header categories={categories} />
         <Routes>
+          <Route path="/login" element={<Login />} />
           <Route exact path="/" element={<Home categories={categories} />} />
           <Route
             exact
