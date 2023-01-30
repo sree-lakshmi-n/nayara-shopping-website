@@ -1,16 +1,41 @@
-import { useRef, useState, useEffect } from "react";
-import {
-  faCheck,
-  faTimes,
-  faInfoCircle,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./Login.css";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import { auth } from "../../firebase";
+import logo from "../../images/logo.png";
+import FlexWrapper from "../../UI/FlexWrapper/FlexWrapper";
 
-const username_regex = /^[a-zA-Z][a-zA-Z0-9-_]{5,20}$/;
-const pwd_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,20}$/;
+export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  return (
+    <FlexWrapper className="login flex-dirn-col" element="div">
+      <Link to="/">
+        <img src={logo} alt="Nayara logo" className="login-logo" />
+      </Link>
+      <div className="login-container">
+        <h2 className="login-title">Sign-in</h2>
 
-import React from "react";
+        <form className="login-form">
+          <input
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email Address"
+          />
 
-export default function Register() {
-  return <div>Register</div>;
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Password"
+          />
+          <button className="btn btn-login-submit" type="submit">
+            Sign In
+          </button>
+          <button className="btn ">New to Nayara? Sign Up</button>
+        </form>
+      </div>
+    </FlexWrapper>
+  );
 }
