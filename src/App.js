@@ -8,6 +8,7 @@ import Login from "./components/Login/Login";
 import { useEffect } from "react";
 import { auth, onAuthStateChanged } from "./firebase";
 import { useStateValue } from "./StateProvider";
+import Checkout from "./components/Checkout/Checkout";
 
 function App() {
   const categories = [
@@ -45,6 +46,7 @@ function App() {
         <Header categories={categories} />
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route exact path="/" element={<Home categories={categories} />} />
           <Route
             exact
