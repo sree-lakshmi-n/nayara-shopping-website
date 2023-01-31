@@ -5,7 +5,7 @@ import NavCategories from "../NavCategories/NavCategories";
 import NavOptions from "../NavOptions/NavOptions";
 import "./Header.css";
 
-export default function NavBar(props) {
+export default function Header(props) {
   return (
     <header className="main-nav">
       <FlexWrapper className="flex-center-align nav__top" element="nav">
