@@ -5,6 +5,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Products from "./components/Products/Products";
 import ProductDetailsCard from "./components/ProductDetailsCard/ProductDetailsCard";
 import Login from "./components/Login/Login";
+import { useEffect } from "react";
+import { auth, onAuthStateChanged } from "./firebase";
+import { useStateValue } from "./StateProvider";
 
 function App() {
   const categories = [
@@ -13,6 +16,29 @@ function App() {
     "men's clothing",
     "women's clothing",
   ];
+
+  const [{ basket, user }, dispatch] = useStateValue();
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (authUser) => {
+      console.log("The user is >>>> ", authUser.uid);
+
+      if (authUser) {
+        // the user just logged in / the user was logged in
+        dispatch({
+          type: "SET_USER",
+          user: authUser,
+        });
+      } else {
+        // the user is logged out
+        dispatch({
+          type: "SET_USER",
+          user: null,
+        });
+      }
+    });
+  }, []);
+
   return (
     <main>
       <BrowserRouter>
