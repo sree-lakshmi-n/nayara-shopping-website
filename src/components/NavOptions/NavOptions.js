@@ -11,7 +11,7 @@ export default function NavOptions(props) {
   const handleAuthentication = () => {
     if (user) {
       auth.signOut().then(() => {
-        console.log("Sign-out successful.");
+        alert("Successfully signed out");
       });
     }
   };
@@ -25,7 +25,7 @@ export default function NavOptions(props) {
         <Link to={!user && "/login"}>
           <div onClick={handleAuthentication} className="header__option">
             <span className="header__optionLineOne">
-              Hello {!user ? "Guest" : user}
+              Hello {!user ? "Guest" : user.email}
             </span>
             <br />
             <span className="header__optionLineTwo">
