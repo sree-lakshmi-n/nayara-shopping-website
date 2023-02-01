@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
 import FlexWrapper from "../../UI/FlexWrapper/FlexWrapper";
 import loading from "../../images/loading.gif";
+import { Link } from "react-router-dom";
+import Container from "../../UI/Container/Container";
 
 export default function ProductDetailsCard() {
   const { id } = useParams();
@@ -36,7 +38,10 @@ export default function ProductDetailsCard() {
   };
 
   return (
-    <>
+    <Container>
+      <Link to={`/${product.category}`} className="btn-back-arrow">
+        <ion-icon name="arrow-back-outline" className="back-arrow"></ion-icon>
+      </Link>
       {!product && (
         <div className="loading">
           <img src={loading} alt="loading animation" />
@@ -68,6 +73,6 @@ export default function ProductDetailsCard() {
           </FlexWrapper>
         </FlexWrapper>
       )}
-    </>
+    </Container>
   );
 }
