@@ -22,7 +22,7 @@ function App() {
 
   useEffect(() => {
     onAuthStateChanged(auth, (authUser) => {
-      console.log("The user is >>>> ", authUser.uid);
+      console.log("The user is >>>> ", authUser);
 
       if (authUser) {
         // the user just logged in / the user was logged in
