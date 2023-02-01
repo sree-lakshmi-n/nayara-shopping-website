@@ -25,7 +25,7 @@ export default function Login() {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        navigate("/");
+        navigate("/", { replace: true });
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -47,7 +47,7 @@ export default function Login() {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        if (userCredential) navigate("/");
+        if (userCredential) navigate("/", { replace: true });
       })
       .catch((error) => {
         const errorCode = error.code;
