@@ -43,3 +43,11 @@
   color: var(--red);
   font-weight: var(--font-semi-bold);
 }
+.login-link {
+  font-weight: var(--font-bold);
+  color: var(--brand-color);
+  cursor: pointer;
+}
+.login-link:hover {
+  text-decoration: underline;
+}
