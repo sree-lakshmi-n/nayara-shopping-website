@@ -1,0 +1,20 @@
+.checkout-pdt {
+  display: flex;
+  align-items: center;
+  gap: 6.4rem;
+  background: var(--light-shade);
+  padding: 3.2rem;
+  border-radius: 8px;
+}
+.checkout-pdt-info {
+  gap: 1.2rem;
+}
+.checkout-pdt-image img {
+  width: 10rem;
+  max-height: 10rem;
+}
+.checkout-pdt-price {
+  font-size: 2.4rem;
+  color: var(--brand-color);
+  font-weight: var(--font-semi-bold);
+}
