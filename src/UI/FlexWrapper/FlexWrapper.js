@@ -6,16 +6,16 @@ export default function FlexWrapper(props) {
     <>
       {" "}
       {props.element === "nav" && (
-        <nav className={`flex ${props.className}`}>{props.children}</nav>
+        <nav className={`flex ${props.className || ""}`}>{props.children}</nav>
       )}
       {props.element === "div" && (
-        <div className={`flex ${props.className}`}>{props.children}</div>
+        <div className={`flex ${props.className || ""}`}>{props.children}</div>
       )}
       {props.element === "ul" && (
-        <ul className={`flex ${props.className}`}>{props.children}</ul>
+        <ul className={`flex ${props.className || ""}`}>{props.children}</ul>
       )}
       {props.element === "li" && (
-        <li className={`flex ${props.className}`}>{props.children}</li>
+        <li className={`flex ${props.className || ""}`}>{props.children}</li>
       )}
     </>
   );
