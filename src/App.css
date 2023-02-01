@@ -41,3 +41,20 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* Back arrow */
+.btn-back-arrow {
+  background-color: var(--dark-blue);
+  color: var(--light-shade);
+  display: inline-block;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+}
+.btn-back-arrow ion-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+}
