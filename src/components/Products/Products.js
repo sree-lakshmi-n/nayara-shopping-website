@@ -5,17 +5,20 @@ import FlexWrapper from "../../UI/FlexWrapper/FlexWrapper";
 import ProductImageBox from "../ProductImageBox/ProductImageBox";
 import { Link } from "react-router-dom";
 import loading from "../../images/loading.gif";
+import Container from "../../UI/Container/Container";
 
 export default function Products(props) {
   const [products, setProducts] = useState("");
-  console.log(props.category);
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/category/${props.category}`)
       .then((res) => res.json())
       .then((json) => setProducts(json));
   }, [props.category]);
   return (
-    <>
+    <Container>
+      <Link to="/" className="btn-back-arrow">
+        <ion-icon name="arrow-back-outline" className="back-arrow"></ion-icon>
+      </Link>
       {!products && (
         <div className="loading">
           <img src={loading} alt="loading animation" />
@@ -49,6 +52,6 @@ export default function Products(props) {
           })}
         </GridWrapper>
       )}
-    </>
+    </Container>
   );
 }
