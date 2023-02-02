@@ -20,7 +20,7 @@ export default function Subtotal() {
       });
       navigate("/", { replace: true });
     } else {
-      alert("Sign in first");
+      alert("Please sign in to continue");
     }
   };
 
