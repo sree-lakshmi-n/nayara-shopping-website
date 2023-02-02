@@ -23,24 +23,27 @@ export default function NavOptions(props) {
         element="ul"
       >
         <Link to={!user && "/login"}>
-          <div onClick={handleAuthentication} className="header__option">
-            <span className="header__optionLineOne">
+          <div
+            onClick={handleAuthentication}
+            className="header__option header__option-login"
+          >
+            {/* <span className="header__optionLineOne">
               Hello {!user ? "Guest" : user.email}
-            </span>
-            <br />
+            </span> */}
+
+            <ion-icon name="person-circle-outline"></ion-icon>
             <span className="header__optionLineTwo">
               {user ? "Sign Out" : "Sign In"}
             </span>
           </div>
         </Link>
 
-        <FlexWrapper className="nav-option-item" element="ul">
-          <Link to="/checkout">
+        <FlexWrapper className="nav-option-item" element="div">
+          <Link to="/checkout" className="cart-icon">
             {" "}
             <ion-icon name={`cart-outline`}></ion-icon>
           </Link>
           <span className="cart-total">{basket?.length}</span>
-          <span className="option-label">Cart</span>
         </FlexWrapper>
       </FlexWrapper>
     </nav>
