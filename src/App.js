@@ -9,6 +9,8 @@ import { useEffect } from "react";
 import { auth, onAuthStateChanged } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import Checkout from "./components/Checkout/Checkout";
+import Footer from "./components/Footer/Footer";
+import FlexWrapper from "./UI/FlexWrapper/FlexWrapper";
 
 function App() {
   const categories = [
@@ -43,33 +45,36 @@ function App() {
   return (
     <main>
       <BrowserRouter>
-        <Header categories={categories} />
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route exact path="/" element={<Home categories={categories} />} />
-          <Route
-            exact
-            path="/jewellery"
-            element={<Products category="jewelery" />}
-          />
-          <Route
-            exact
-            path="/electronics"
-            element={<Products category="electronics" />}
-          />
-          <Route
-            exact
-            path="/men's clothing"
-            element={<Products category="men's clothing" />}
-          />
-          <Route
-            exact
-            path="/women's clothing"
-            element={<Products category="women's clothing" />}
-          />
-          <Route path="/:category/:id" element={<ProductDetailsCard />} />
-        </Routes>
+        <FlexWrapper element="div" className="flex-dirn-col main-container">
+          <Header categories={categories} />
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route exact path="/" element={<Home categories={categories} />} />
+            <Route
+              exact
+              path="/jewellery"
+              element={<Products category="jewelery" />}
+            />
+            <Route
+              exact
+              path="/electronics"
+              element={<Products category="electronics" />}
+            />
+            <Route
+              exact
+              path="/men's clothing"
+              element={<Products category="men's clothing" />}
+            />
+            <Route
+              exact
+              path="/women's clothing"
+              element={<Products category="women's clothing" />}
+            />
+            <Route path="/:category/:id" element={<ProductDetailsCard />} />
+          </Routes>
+          <Footer />
+        </FlexWrapper>
       </BrowserRouter>
     </main>
   );
