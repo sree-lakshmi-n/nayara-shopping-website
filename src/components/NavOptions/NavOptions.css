@@ -9,3 +9,40 @@
   gap: 0.4rem;
   cursor: pointer;
 }
+.nav-option-item {
+  position: relative;
+}
+.cart-icon {
+  padding: 0.8rem;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.cart-icon ion-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+.cart-total {
+  position: absolute;
+  right: 0;
+  bottom: 75%;
+  background-color: var(--dark-shade);
+  padding: 0.4rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  font-weight: var(--font-bold);
+  color: var(--light-shade);
+}
+.cart-icon:hover {
+  background-color: var(--light-shade);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
