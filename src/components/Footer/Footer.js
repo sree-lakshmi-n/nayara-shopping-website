@@ -9,7 +9,7 @@ export default function Footer() {
       {" "}
       <Logo />
       <p className="copyright">
-        Copyright &copy; 2027 by Nayara, Inc. All rights reserved.
+        Copyright &copy; 2023 by Nayara, Inc. All rights reserved.
       </p>
     </FlexWrapper>
   );
