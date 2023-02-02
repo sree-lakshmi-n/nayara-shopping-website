@@ -49,4 +49,5 @@ body {
   color: var(--dark-shade);
   background-color: var(--catskill-white);
   line-height: 1;
+  min-height: 100vh;
 }
