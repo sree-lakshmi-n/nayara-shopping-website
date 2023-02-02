@@ -23,7 +23,12 @@ export default function CheckoutProduct(props) {
         <h2 className="checkout-pdt-title">{props.title}</h2>
         <p className="checkout-pdt-price">${props.price}</p>
         <p className="checkout-pdt-rating">{props.rating.rate}</p>
-        <button onClick={removeFromBasket}>Remove from Basket</button>
+        <button
+          className="btn btn-remove-from-basket"
+          onClick={removeFromBasket}
+        >
+          Remove from Basket
+        </button>
       </FlexWrapper>
     </div>
   );
