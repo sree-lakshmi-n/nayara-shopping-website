@@ -46,3 +46,6 @@
 .btn-checkout:hover {
   background-color: var(--dark-blue);
 }
+.sub-total {
+  margin-bottom: 6.4rem;
+}
