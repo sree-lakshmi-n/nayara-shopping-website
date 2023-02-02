@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 export default function Checkout() {
   const [{ basket, user }, dispatch] = useStateValue();
   return (
-    <Container className="checkout">
+    <div className="checkout">
       <Link to="/" className="btn-back-arrow">
         <ion-icon name="arrow-back-outline" className="back-arrow"></ion-icon>
       </Link>
@@ -30,6 +30,6 @@ export default function Checkout() {
       <div className="checkout-right">
         <Subtotal />
       </div>
-    </Container>
+    </div>
   );
 }
