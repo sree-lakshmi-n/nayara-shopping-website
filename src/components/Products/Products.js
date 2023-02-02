@@ -6,9 +6,30 @@ import ProductImageBox from "../ProductImageBox/ProductImageBox";
 import { Link } from "react-router-dom";
 import loading from "../../images/loading.gif";
 import Container from "../../UI/Container/Container";
+import { useStateValue } from "../../StateProvider";
 
 export default function Products(props) {
   const [products, setProducts] = useState("");
+  const [{ basket }, dispatch] = useStateValue();
+  const addToBasket = (event) => {
+    const id = event.target.parentElement.getAttribute("data-id");
+    fetch(`https://fakestoreapi.com/products/${id}`)
+      .then((res) => res.json())
+      .then((json) => {
+        const pdt = json;
+        dispatch({
+          type: "ADD_TO_BASKET",
+          item: {
+            id: pdt.id,
+            title: pdt.title,
+            image: pdt.image,
+            price: pdt.price,
+            rating: pdt.rating.rate,
+          },
+        });
+      });
+    // dispatch the item into the data layer
+  };
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/category/${props.category}`)
       .then((res) => res.json())
@@ -46,6 +67,13 @@ export default function Products(props) {
                 >
                   <span className="pdt-rating">{product.rating.rate} ⭐️</span>
                   <span className="pdt-cost">${product.price}</span>
+                  <span
+                    data-id={product.id}
+                    className="add-to-cart-wrapper"
+                    onClick={addToBasket}
+                  >
+                    <ion-icon name="cart-outline"></ion-icon>
+                  </span>
                 </FlexWrapper>
               </FlexWrapper>
             );
