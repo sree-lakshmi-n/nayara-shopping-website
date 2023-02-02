@@ -39,7 +39,12 @@ export default function ProductDetailsCard() {
 
   return (
     <Container>
-      <Link to={`/${product.category}`} className="btn-back-arrow">
+      <Link
+        to={`/${
+          product.category === "jewelery" ? "jewellery" : product.category
+        }`}
+        className="btn-back-arrow"
+      >
         <ion-icon name="arrow-back-outline" className="back-arrow"></ion-icon>
       </Link>
       {!product && (
