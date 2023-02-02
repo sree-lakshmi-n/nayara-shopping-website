@@ -44,7 +44,7 @@ export default function Subtotal() {
         </FlexWrapper>
       )}
       {basket.length > 0 && (
-        <>
+        <FlexWrapper className="sub-total-wrapper flex-dirn-col" element="div">
           <CurrencyFormat
             renderText={(value) => {
               console.log(value);
@@ -63,7 +63,7 @@ export default function Subtotal() {
           <button className="btn btn-checkout" onClick={emptyBasket}>
             Proceed to Checkout
           </button>
-        </>
+        </FlexWrapper>
       )}
     </div>
   );
